@@ -1,10 +1,15 @@
 'use strict';
 
-angular.module('pelitweetsgithubioApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+angular.module('pelitweets').controller('MainController',
+	function MainController($scope, $rootScope, $window, $location) {
+		$scope.slide = '';
+		$rootScope.back = function() {
+			$scope.slide = 'slide-right';
+			$window.history.back();
+		}
+		$rootScope.go = function(path) {
+			$scope.slide = 'slide-left';
+			$location.url(path);
+		}
+	}
+);

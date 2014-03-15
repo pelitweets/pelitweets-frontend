@@ -1,16 +1,22 @@
 'use strict';
 
-angular.module('pelitweetsgithubioApp', [
+angular.module('pelitweets', [
   'ngResource',
   'ngRoute'
 ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+  .config([
+    '$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+      $routeProvider
+        .when('/', {
+          templateUrl: '../views/movie-list.html',
+				  controller: 'MovieListController'
+			  }).
+			  when('/:movieId', {
+				  templateUrl: '../views/movie-detail.html',
+				  controller: 'MovieDetailController'
+			  }).
+			  otherwise({
+				  redirectTo: '/'
+			  });
+	  }
+  ]);
