@@ -1,12 +1,11 @@
 'use strict';
 
-angular.module('pelitweets').controller('MovieListController',
-	function MovieListController($scope, $http, $routeParams, $location) {
-		$http.get('http://pelitweets-dev.herokuapp.com/api/movies').
-			success(function(data, status, headers, config) {
-				if(data) {
-					$scope.movies = data;
-				}
-			});
-	}
-);
+pelitweets.controller('MovieListController', ['$scope', '$http', function ($scope, $http) {
+
+  $http.get('http://pelitweets.herokuapp.com/api/movies')
+    .success(function(data) {
+      if(data) {
+        $scope.movies = data;
+      }
+    });
+}]);

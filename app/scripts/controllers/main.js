@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('pelitweets').controller('MainController',
+pelitweets.controller('MainController',
 	function MainController($scope, $rootScope, $window, $location) {
 		$scope.slide = '';
 		$rootScope.back = function() {

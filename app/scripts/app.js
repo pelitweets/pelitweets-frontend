@@ -1,19 +1,18 @@
 'use strict';
 
-angular.module('pelitweets', ['ngRoute'])
-  .config([
-    '$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
-      $routeProvider
-        .when('/', {
-          templateUrl: '../views/movie-list.html',
-				  controller: 'MovieListController'
-			  }).
-			  when('/:movieId', {
-				  templateUrl: '../views/movie-detail.html',
-				  controller: 'MovieDetailController'
-			  }).
-			  otherwise({
-				  redirectTo: '/'
-			  });
-	  }
-  ]);
+var pelitweets = angular.module('pelitweets', ['ngRoute']);
+
+pelitweets.config(['$routeProvider', function ($routeProvider) {
+  $routeProvider
+    .when('/', {
+      templateUrl: 'views/movie-list.html',
+		  controller: 'MovieListController'
+	  }).
+	  when('/:movieId', {
+		  templateUrl: 'views/movie-detail.html',
+		  controller: 'MovieDetailController'
+	  }).
+	  otherwise({
+		  redirectTo: '/'
+	  });
+}]);
