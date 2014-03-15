@@ -1,7 +1,7 @@
 'use strict';
 
-pelitweets.controller('MainController',
-	function MainController($scope, $rootScope, $window, $location) {
+pelitweets.controller('MainController',['$scope','$rootScope','$window','$location',
+	function ($scope, $rootScope, $window, $location) {
 		$scope.slide = '';
 		$rootScope.back = function() {
 			$scope.slide = 'slide-right';
@@ -11,5 +11,5 @@ pelitweets.controller('MainController',
 			$scope.slide = 'slide-left';
 			$location.url(path);
 		}
-	}
+	}]
 );

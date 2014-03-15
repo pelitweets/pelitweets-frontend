@@ -2,7 +2,7 @@
 
 var pelitweets = angular.module('pelitweets', ['ngRoute']);
 
-pelitweets.config(['$routeProvider', function ($routeProvider) {
+pelitweets.config(['$routeProvider', '$locationProvider', function ($routeProvider) {
   $routeProvider
     .when('/', {
       templateUrl: 'views/movie-list.html',
@@ -15,4 +15,5 @@ pelitweets.config(['$routeProvider', function ($routeProvider) {
 	  otherwise({
 		  redirectTo: '/'
 	  });
+
 }]);
