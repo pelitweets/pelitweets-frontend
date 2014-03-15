@@ -19,9 +19,12 @@ body
 article.list_item
 	background bg_card
 	border 2px solid bg_body
+	border-top 2px solid c_orange
 	border-bottom-right-radius 5px
 	border-bottom-left-radius 5px
+	cursor pointer
 	margin .5em
+	text-align left
 	transition .3s border-color
 	&:hover
 		border-color bg_body - 25
@@ -31,26 +34,10 @@ article.list_item
 		margin .5em
 		width 50%
 
-	div.main
-		border-bottom 3px solid c_orange
-
-	div.footer
-		font-size .75em
-		padding .5em
-		text-align right
-		a
-			inlineBlock()
-			cursor pointer
-			transition .3s color
-			&:hover
-				color c_orange
-				text-decoration underline
-
 	figure.image-list
 		inlineBlock()
 		height 120px
 		width 80px
-
 		img
 			height 100%
 			width 100%
@@ -83,6 +70,9 @@ article.list_item
 			position absolute
 			top 100%
 
+section
+	text-align center
+
 #logo
 	inlineBlock()
 	padding 0 .5em 0 0
@@ -98,6 +88,7 @@ header
 	border-top 2px solid bg_header - 40
 	color bg_card
 	font-family 'museo300'
+	text-align left
 	height auto
 	width 100%
 
@@ -123,17 +114,20 @@ header
 		z-index 1
 
 	figure.poster
+		padding-top 5em
 		width 100%
 		height 300px
+		overflow hidden
 		img
 			position relative
 			top -154px
 			width 100%
-			z-index -1
+			z-index -10
 
 	h3
 		background bg_header
 		border-bottom 2px solid c_orange
+		border-top 2px solid #222
 		color #eaeaea
 		font-family 'museo300'
 		padding .25em
@@ -195,3 +189,5 @@ header
 				position relative
 				top -24px
 				left 51px
+
+@import 'responsive'
