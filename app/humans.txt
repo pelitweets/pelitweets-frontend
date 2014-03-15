@@ -1,0 +1,30 @@
+/* TEAM */
+
+ScrapperMan: Jorge Arevalo
+Contact: jorgeas80@gmail.com
+Twitter: @jorgeas80
+From: Madrid, Spain
+
+Backend Ninja: Adolfo Sanz de Diego
+Contact: asanzdiego@gmail.com
+Twitter: @asanzdiego
+From: Madrid, Spain
+
+Frontend Samurai: Carlos Azaustre
+Contact: cazaustre@gmail.com
+Twitter: @carlosazaustre
+From: Madrid, Spain
+
+/* THANKS */
+
+Frontend Part-Time: Francisco Sevillano
+Twitter: @frsevillano
+From: Madrid, Spain & Nashville, TN
+
+/* SITE */
+
+Last Update: 2014-01-16
+Language: Spanish
+Doctype: HTML5
+IDE: SublimeText2, Atom.io, Photoshop, Git, Grunt.js
+Technology: HTML5Boilerplate, Stylus, Angular.js, Node.js, ScrapperWiki, Python

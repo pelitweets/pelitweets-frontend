@@ -1,0 +1,45 @@
+<header>
+	<figure id="logo">
+		<img src="img/logo.png"/>
+	</figure>
+	<h1>Pelitweets</h1>
+</header>
+
+<div class="search-bar">
+	<input ng-model="query" type="search" placeholder="Búsqueda">	
+</div>
+
+<section>
+	<article ng-repeat="movie in movies | filter:query | orderBy:orderProp" class="list_item">
+		<div class="main">
+			<figure class="image-list">
+				<img ng-src="{{movie.movie_poster_link}}">
+			</figure>
+			<aside>
+				<p class="movie-title">
+					{{movie.movie_title}}
+				</p>
+				<p class="date">
+					<span class="icon-calendar"></span>
+					{{movie.movie_release_date | date:'longDate'}}
+				</p>
+				<p class="date">
+          <span class="icon-file"></span>
+          {{movie.movie_rating_fa}} Filmaffinity
+				</p>
+				<p class="date">
+			    <span class="icon-file"></span>
+			    {{movie.movie_rating_imdb}} IMDB
+				</p>
+				<p class="date">
+			    <span class="icon-file"></span>
+			    {{movie.movie_rating_score}} Twitter
+				</p>
+			</aside>
+			<span class="score">{{movie.movie_rating_average | number:1}}</span>
+		</div>
+		<div class="footer">
+			<a ng-click="go(movie._id)">Más info »</a>
+		</div>
+	</article>
+</section>

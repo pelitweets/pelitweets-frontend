@@ -1,0 +1,48 @@
+<header>
+    <figure id="logo">
+		<img src="img/logo.png"/>
+	</figure>
+    <h1 class="movie-title">{{movie.movie_title}}</h1>
+    <a href="" ng-click="back()">Atrás</a>
+</header>
+
+<section class='details'>
+	<figure class="image-list">
+		<img ng-src="{{movie.movie_poster_link}}" alt="{{movie.movie_title}}">
+	</figure>
+	<div>
+		<h3><span class="icon-camera"></span>Ficha Técnica</h3>
+		<ul>
+			<li class='original-title'>{{movie.movie_original_title}}</li>
+			<li><span class="icon-earth"></span> {{movie.movie_country}}</li>
+			<li><span class="icon-clock"></span> {{movie.movie_runtime}}</li>
+			<li><span class="icon-file"></span>
+			  {{movie.movie_rating_fa}} Filmaffinity</li>
+			<li><span class="icon-file"></span>
+			  {{movie.movie_rating_imdb}} IMDB</li>
+			<li><span class="icon-file"></span>
+			  {{movie.movie_rating_score}} Twitter</li>
+			<li><strong><span class="icon-file"></span>
+			  {{movie.movie_rating_score}} Media</strong></li>
+		</ul>
+	</div>
+</section>
+
+<section class="sinopsis">
+	<h3><span class="icon-quotes-left"></span> Argumento</h3>
+	<p>{{movie.movie_plot}}</p>
+</section>
+<aside class="tweets">
+	<h3><span class="icon-twitter"></span> Lo que dice la red</h3>
+	<ul>
+		<li ng-repeat="tweet in movie.movie_tweets_analyzed" class="tweetcard">
+			<img ng-src="{{tweet.avatar}}" alt="{{tweet.nick}}">
+			<span class="username">{{tweet.username}}</span>
+			<span class="nick">
+				<span class="icon-twitter"></span>
+				<a href="http://twitter.com/{{tweet.nick}}">@{{tweet.nick}}</a>
+			</span>
+			<span class="text">{{tweet.text}}</span>
+		</li>
+	</ul>
+</aside>

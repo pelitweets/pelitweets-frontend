@@ -1,0 +1,197 @@
+@import '../bower_components/normalize.styl/normalize'
+
+@import 'fonts'
+@import 'colors'
+
+inlineBlock()
+	display inline-block
+	vertical-align top
+
+h1,h2,h3,h4,h5,h6,div,section,nav,article,aside,figure,ul,ol,li,p,span
+	margin 0
+	padding 0
+
+body
+	background bg_body
+	font-family 'Open Sans'
+	font-size 16px
+
+article.list_item
+	background bg_card
+	border 2px solid bg_body
+	border-bottom-right-radius 5px
+	border-bottom-left-radius 5px
+	margin .5em
+	transition .3s border-color
+	&:hover
+		border-color bg_body - 25
+
+	aside
+		inlineBlock()
+		margin .5em
+		width 50%
+
+	div.main
+		border-bottom 3px solid c_orange
+
+	div.footer
+		font-size .75em
+		padding .5em
+		text-align right
+		a
+			inlineBlock()
+			cursor pointer
+			transition .3s color
+			&:hover
+				color c_orange
+				text-decoration underline
+
+	figure.image-list
+		inlineBlock()
+		height 120px
+		width 80px
+
+		img
+			height 100%
+			width 100%
+
+	p.date
+		color #888
+		font-size .85em
+
+	p.movie-title
+		font-family 'museo300'
+		font-size 1.2em
+		font-weight bold
+		margin 0 0 .5em 0
+		text-overflow ellipsis
+
+	span.score
+		background c_orange
+		color bg_card
+		font-weight bold
+		padding .25em
+		position relative
+		right 4px
+		top 4px
+		&:after
+			border-left 16px solid transparent
+			border-right 15px solid transparent
+			border-top 5px solid c_orange
+			content ""
+			left 0
+			position absolute
+			top 100%
+
+#logo
+	inlineBlock()
+	padding 0 .5em 0 0
+	margin .5em
+	width 50px
+	border-right 2px solid c_orange
+
+	img
+		width 100%
+
+header
+	background bg_header
+	border-top 2px solid bg_header - 40
+	color bg_card
+	font-family 'museo300'
+	height auto
+	width 100%
+
+	h1
+		inlineBlock()
+		font-size 1.3em
+		line-height 3.5em
+		text-align center
+
+		&.movie-title
+			line-height 1em
+			margin-top .25em
+			text-align left
+			width 50%
+.details
+	margin-bottom -9em
+
+.details, .sinopsis, .tweets
+	div
+		background bg_body
+		position relative
+		top -10em
+		z-index 1
+
+	figure.poster
+		width 100%
+		height 300px
+		img
+			position relative
+			top -154px
+			width 100%
+			z-index -1
+
+	h3
+		background bg_header
+		border-bottom 2px solid c_orange
+		color #eaeaea
+		font-family 'museo300'
+		padding .25em
+		span
+			padding 0 .5em
+
+	ul
+		list-style-type none
+		padding .5em
+
+		li.original-title
+			font-style italic
+
+.sinopsis
+	p
+		padding 1em
+
+.search-bar
+	background bg_body
+	margin .5em
+	text-align center
+	input
+		border 2px solid bg_body - 30
+		border-radius 5px
+		box-sizing boder-box
+		color bg_body - 30
+		height 40px
+		outline 0
+		padding 0 15px
+		transition .3s color, .3s border-color
+		width 80%
+		&:focus
+			border-color bg_body - 60
+			color bg_body - 60
+			outline-offset -2px
+
+.tweets
+
+	ul
+		//inlineBlock()
+		list-style-type none
+
+		li
+			background bg_card
+			border-radius 5px
+			border-bottom 2px solid bg_body - 40
+			margin-bottom 1em
+			padding .5em
+
+			img
+				inlineBlock()
+				border-radius 45px
+				width 45px
+
+			span.username
+				font-weight bold
+			span.nick
+				display inherit
+				position relative
+				top -24px
+				left 51px
