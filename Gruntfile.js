@@ -114,8 +114,8 @@ module.exports = function (grunt) {
 		stylus: {
 			compile: {
 				options: {
-        paths: ['<%= yeoman.app %>/stylus/{,*/}*.styl'],
-					'include css': true
+          paths: ['<%= yeoman.app %>/stylus/{,*/}*.styl'],
+				  'include css': true
 				},
 				files: {
 					'<%= yeoman.app %>/css/main.css': '<%= yeoman.app %>/stylus/main.styl'

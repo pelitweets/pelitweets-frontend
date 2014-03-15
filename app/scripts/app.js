@@ -1,9 +1,6 @@
 'use strict';
 
-angular.module('pelitweets', [
-  'ngResource',
-  'ngRoute'
-])
+angular.module('pelitweets', ['ngRoute'])
   .config([
     '$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
       $routeProvider
