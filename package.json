@@ -1,6 +1,7 @@
 {
-  "name": "pelitweetsgithubio",
-  "version": "0.0.0",
+  "name": "pelitweets",
+  "version": "1.0.0",
+  "author": "Pelitweets Team <pelitweets@gmail.com>",
   "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.4",

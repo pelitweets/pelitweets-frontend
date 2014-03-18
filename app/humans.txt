@@ -27,4 +27,4 @@ Last Update: 2014-01-16
 Language: Spanish
 Doctype: HTML5
 IDE: SublimeText2, Atom.io, Photoshop, Git, Grunt.js
-Technology: HTML5Boilerplate, Stylus, Angular.js, Node.js, ScrapperWiki, Python
+Technology: HTML5Boilerplate, Stylus, Normalize, Angular.js, Node.js, ScrapperWiki, Python
