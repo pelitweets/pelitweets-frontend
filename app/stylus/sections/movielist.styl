@@ -1,0 +1,55 @@
+.list_item
+  background bg_card
+  border 2px solid bg_body
+  border-top 2px solid c_orange
+  border-bottom-right-radius 5px
+  border-bottom-left-radius 5px
+  cursor pointer
+  margin .5em
+  text-align left
+  transition .3s border-color
+
+  &:hover
+    border-color bg_body - 25
+
+  aside
+    inlineBlock()
+    margin .5em
+    width 50%
+
+  .image-list
+    inlineBlock()
+    height 120px
+    width 80px
+    img
+      height 100%
+      width 100%
+
+  .date
+    color #888
+    font-size .85em
+
+  .movie-title
+    font-family 'museo300'
+    font-size 1.2em
+    font-weight bold
+    margin 0 0 .5em 0
+    text-overflow ellipsis
+
+  .score
+    background c_orange
+    color bg_card
+    font-weight bold
+    padding .25em
+    position relative
+    right 4px
+    top 4px
+
+    &:after
+      border-left 16px solid transparent
+      border-right 15px solid transparent
+      border-top 5px solid c_orange
+      content ""
+      left 0
+      position absolute
+      top 100%

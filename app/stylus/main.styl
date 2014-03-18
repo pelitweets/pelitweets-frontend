@@ -2,94 +2,22 @@
 
 @import 'fonts'
 @import 'colors'
+@import 'functions'
 
-inlineBlock()
-	display inline-block
-	vertical-align top
-
-h1,h2,h3,h4,h5,h6,div,section,nav,article,aside,figure,ul,ol,li,p,span
-	margin 0
-	padding 0
+// Main Styles and Mobile First
 
 body
 	background bg_body
 	font-family 'Open Sans'
 	font-size 16px
 
-article.list_item
-	background bg_card
-	border 2px solid bg_body
-	border-top 2px solid c_orange
-	border-bottom-right-radius 5px
-	border-bottom-left-radius 5px
-	cursor pointer
-	margin .5em
-	text-align left
-	transition .3s border-color
-	&:hover
-		border-color bg_body - 25
-
-	aside
-		inlineBlock()
-		margin .5em
-		width 50%
-
-	figure.image-list
-		inlineBlock()
-		height 120px
-		width 80px
-		img
-			height 100%
-			width 100%
-
-	p.date
-		color #888
-		font-size .85em
-
-	p.movie-title
-		font-family 'museo300'
-		font-size 1.2em
-		font-weight bold
-		margin 0 0 .5em 0
-		text-overflow ellipsis
-
-	span.score
-		background c_orange
-		color bg_card
-		font-weight bold
-		padding .25em
-		position relative
-		right 4px
-		top 4px
-		&:after
-			border-left 16px solid transparent
-			border-right 15px solid transparent
-			border-top 5px solid c_orange
-			content ""
-			left 0
-			position absolute
-			top 100%
-
-section
-	text-align center
-
-#logo
-	inlineBlock()
-	padding 0 .5em 0 0
-	margin .5em
-	width 50px
-	border-right 2px solid c_orange
-
-	img
-		width 100%
-
 header
 	background bg_header
 	border-top 2px solid bg_header - 40
 	color bg_card
 	font-family 'museo300'
-	text-align left
 	height auto
+	text-align left
 	width 100%
 
 	h1
@@ -103,52 +31,22 @@ header
 			margin-top .25em
 			text-align left
 			width 50%
-.details
-	margin-bottom -9em
 
-.details, .sinopsis, .tweets
-	div
-		background bg_body
-		position relative
-		top -10em
-		z-index 1
+#logo
+	inlineBlock()
+	padding 0 .5em 0 0
+	margin .5em
+	width 50px
+	border-right 2px solid c_orange
 
-	figure.poster
-		padding-top 5em
+	img
 		width 100%
-		height 300px
-		overflow hidden
-		img
-			position relative
-			top -154px
-			width 100%
-			z-index -10
-
-	h3
-		background bg_header
-		border-bottom 2px solid c_orange
-		border-top 2px solid #222
-		color #eaeaea
-		font-family 'museo300'
-		padding .25em
-		span
-			padding 0 .5em
-
-	ul
-		list-style-type none
-		padding .5em
-
-		li.original-title
-			font-style italic
-
-.sinopsis
-	p
-		padding 1em
 
 .search-bar
 	background bg_body
 	margin .5em
 	text-align center
+
 	input
 		border 2px solid bg_body - 30
 		border-radius 5px
@@ -159,35 +57,16 @@ header
 		padding 0 15px
 		transition .3s color, .3s border-color
 		width 80%
+
 		&:focus
 			border-color bg_body - 60
 			color bg_body - 60
 			outline-offset -2px
 
-.tweets
 
-	ul
-		//inlineBlock()
-		list-style-type none
+@import 'sections/movielist'
+@import 'sections/moviedetail'
 
-		li
-			background bg_card
-			border-radius 5px
-			border-bottom 2px solid bg_body - 40
-			margin-bottom 1em
-			padding .5em
-
-			img
-				inlineBlock()
-				border-radius 45px
-				width 45px
-
-			span.username
-				font-weight bold
-			span.nick
-				display inherit
-				position relative
-				top -24px
-				left 51px
-
-@import 'responsive'
+// Responsive Design Styles
+@import 'responsive/responsive-tablet'
+@import 'responsive/responsive-desktop'

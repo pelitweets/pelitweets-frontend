@@ -1,0 +1,69 @@
+.details
+  margin-bottom -9em
+
+.details, .sinopsis, .tweets
+  div
+    background bg_body
+    position relative
+    top -10em
+    z-index 1
+
+  figure.poster
+    padding-top 5em
+    width 100%
+    height 300px
+    overflow hidden
+    img
+      position relative
+      top -154px
+      width 100%
+      z-index -10
+
+  h3
+    background bg_header
+    border-bottom 2px solid c_orange
+    border-top 2px solid #222
+    color #eaeaea
+    font-family 'museo300'
+    padding .25em
+
+    span
+      padding 0 .5em
+
+  ul
+    list-style-type none
+    padding .5em
+
+    li.original-title
+      font-style italic
+
+.sinopsis
+  p
+    padding 1em
+
+.tweets
+
+  ul
+    inlineBlock()
+    list-style-type none
+
+    li
+      background bg_card
+      border-radius 5px
+      border-bottom 2px solid bg_body - 40
+      margin-bottom 1em
+      padding .5em
+
+      img
+        inlineBlock()
+        border-radius 45px
+        width 45px
+
+      span.username
+        font-weight bold
+
+      span.nick
+        display inherit
+        position relative
+        top -24px
+        left 51px
