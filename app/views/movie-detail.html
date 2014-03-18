@@ -17,14 +17,16 @@
 			<li class='original-title'>{{movie.movie_original_title}}</li>
 			<li><span class="icon-earth"></span> {{movie.movie_country}}</li>
 			<li><span class="icon-history"></span> {{movie.movie_runtime}}</li>
-			<li><span class="icon-signup"></span>
-			  {{movie.movie_rating_fa}} Filmaffinity</li>
-			<li><span class="icon-signup"></span>
-			  {{movie.movie_rating_imdb}} IMDB</li>
-			<li><span class="icon-signup"></span>
-			  {{movie.movie_rating_score}} Twitter</li>
-			<li><strong><span class="icon-gauge"></span>
-			  {{movie.movie_rating_score}} Media</strong></li>
+      <ul class="scores">
+        <li><span class="icon-signup"></span>
+          <span class="label">{{movie.movie_rating_fa}}</span> Filmaffinity</li>
+        <li><span class="icon-signup"></span>
+          <span class="label">{{movie.movie_rating_imdb}}</span> IMDB</li>
+        <li><span class="icon-signup"></span>
+          <span class="label">{{movie.movie_rating_score}}</span> Twitter</li>
+        <li class="average"><strong><span class="icon-gauge"></span>
+          <span class="label label-orange">{{movie.movie_rating_score}}</span> Media</strong></li>
+      </ul>
 		</ul>
 	</div>
 </section>
@@ -33,6 +35,7 @@
 	<h3><span class="icon-newspaper"></span> Argumento</h3>
 	<p>{{movie.movie_plot}}</p>
 </section>
+
 <aside class="tweets">
 	<h3><span class="icon-bullhorn"></span> Lo que dice la red</h3>
 	<ul>
