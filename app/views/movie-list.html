@@ -9,7 +9,7 @@
 	<input ng-model="query" type="search" placeholder="Busca películas de estreno en Cine">
 </div>
 
-<section>
+<section class="container">
 	<article ng-repeat="movie in movies | filter:query | orderBy:orderProp" class="list_item">
 		<div class="main" ng-click="go(movie._id)">
 			<figure class="image-list">
